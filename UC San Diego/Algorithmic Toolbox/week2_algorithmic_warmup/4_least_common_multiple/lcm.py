@@ -1,4 +1,4 @@
-# Uses python3
+# Use the fact that lcm * hcf = a*b
 import sys
 
 def lcm_naive(a, b):
@@ -7,9 +7,20 @@ def lcm_naive(a, b):
             return l
 
     return a*b
+def gcd_euclid(a,b):
+    if b == 0:
+        return a
+    else:
+        return gcd_euclid(b,a%b)
+
+def lcm_fast(a,b):
+    gcd= gcd_euclid(a,b)
+    return ((a*b)//gcd)
+
 
 if __name__ == '__main__':
-    input = sys.stdin.read()
+    input = input()
     a, b = map(int, input.split())
-    print(lcm_naive(a, b))
+    print( lcm_fast(a,b))
+    # print(lcm_naive(a, b))
 
