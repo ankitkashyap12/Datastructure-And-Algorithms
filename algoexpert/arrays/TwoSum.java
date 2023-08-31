@@ -30,6 +30,7 @@ class TwoSum {
     public static  int[] twoSumBinary(int[] array, int targetSum){
         //O(nlog(n)) and O(1)
         Arrays.sort(array);
+
         int right=array.length-1;
         int left=0;
         while(left<right){
@@ -62,6 +63,17 @@ class TwoSum {
         int[] arr= new int[]{1, 2, 3};
         int[] result = twoSumUsingSet(arr,sum);
         System.out.printf(result[0]+" "+result[1]);
+
+        Set<Integer[]> set = new HashSet<>();
+        Integer[] inArr = new Integer[]{1,2};
+        Integer[] inArr2 = new Integer[]{1,2};
+        set.add(inArr);
+        set.add(inArr2);
+        if(set.contains(inArr))
+        {
+            System.out.println("tru");
+            System.out.println("size "+set.size());
+        }
     }
 }
 
