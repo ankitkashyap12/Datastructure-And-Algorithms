@@ -9,11 +9,14 @@ import java.util.Arrays;
  * create. The given coins can have
  * any positive integer value and aren't necessarily unique (i.e., you can have
  * multiple coins of the same value).</p>
- * <b>Approach:</b><p>so we will first sort array, then one by one will check starting from 1st element if that change can be made. It is observed that if change is made up say K it mean all integer between 1..k are changes that can be made.
- * <br>we will track change and if next intger is greater than change+1 it means smallest change that can be made is currenChange+1' Intuitively to think if next no is less than change +1 i
- * t means that all changes upto next intger V can be made using V+1,V=2,V=3...etc.  </p>
+ * <b>Approach:</b><p>so we will first sort array, then one by one will check starting from 1st
+ * element if that change can be made.
+ * It is observed that if change is made up say K it mean all integer between 1..k are changes
+ * that can be made.
+ * <br>we will track change and if next intger is greater than change+1 it means smallest change
+ * that can be made is currenChange+1' Intuitively to think if next no is less than change +1
+ * it means that all changes upto next intger V can be made using V+1,V+2,V+3...etc.  </p>
  * more :
- * As I spent quite a bit of time looking at this problem and solution, I thought I might as well share the workings that helped me finally get it.
  *
  * Iterating through the example array [1,1,3,6,13], where:
  * - S represents the set of numbers we have gone through in the for loop

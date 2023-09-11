@@ -40,7 +40,7 @@ public class SortedSquaredArray {
     }
 
     public static int[] sortedSquaredArrayOptimal(int[] array) {
-        // since arrays may contain negative hence the squared value randomise he order
+        // since arrays may contain negative hence the squared value randomise the order
 //        to overcome this we will start from both end and compare absolute value , we know whichever is is larger among these that square should be in output array in
 //        reverse position as no other remaining element's square can be greater
         //O(n) and O(n) space
