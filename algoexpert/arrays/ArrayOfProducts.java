@@ -32,7 +32,7 @@ public class ArrayOfProducts {
     public int[] arrayOfProductsOptimal(int[] array) {
         // we can store the product we have already calculated
         //we will store all product left of that indices and right of indices in 2 array.
-        // product of rspective left*right indices in those array will be product
+        // product of respective left*right indices in those array will be product
         int[] leftProducts = new int[array.length];
         int[] rightProducts = new int[array.length];
         int leftProd = 1;
